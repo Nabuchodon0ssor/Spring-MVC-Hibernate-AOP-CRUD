@@ -4,6 +4,10 @@ This is a classic Spring MVC (non-Spring Boot) CRUD application.
 The application allows you to view, add, update and delete employees using a web interface (JSP).
 All changes are persisted in a MySQL database.
 
+## Screenshots
+![Screenshot](images/Screenshot1.png)
+![Screenshot](images/Screenshot2.png)
+
 🛠 Requirements
 
 Java 8+
