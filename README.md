@@ -1,49 +1,86 @@
 # Spring MVC + Hibernate CRUD Application
 
-This is a classic Spring MVC (non-Spring Boot) CRUD application.
-The application allows you to view, add, update and delete employees using a web interface (JSP).
-All changes are persisted in a MySQL database.
+This is a classic **Spring MVC (non-Spring Boot)** CRUD application for managing employees.
+
+The application allows users to **view, add, update and delete employees** via a web interface (JSP).
+All changes are persisted in a **MySQL database** using **Hibernate ORM**.
+
+The project also demonstrates:
+- **Spring AOP** for logging repository method execution
+- **DAO pattern** for clean separation of persistence logic
+
+## ✨ Features
+
+- Full CRUD operations for employees (Create, Read, Update, Delete)
+- Web interface built with **Spring MVC + JSP**
+- Persistence layer implemented with **Hibernate ORM**
+- **DAO pattern** used for database access
+- **Spring AOP logging** with `@Around` advice
+- MySQL database integration
+- Classic layered architecture (Controller → Service → DAO)
 
 ## Screenshots
-![Screenshot](images/Screenshot1.png)
-![Screenshot](images/Screenshot2.png)
 
-🛠 Requirements
+### Employee List
+![Employee List](images/Screenshot1.png)
 
-Java 8+
+### Add / Edit Employee
+![Employee Form](images/Screenshot2.png)
 
-Maven
+## 🛠 Requirements
 
-MySQL 8.x
+- ☕ Java 8 or higher
+- 📦 Maven
+- 🐬 MySQL 8.x
+- 🐱 Apache Tomcat 9.x
+- 💡 IntelliJ IDEA (recommended)
 
-Apache Tomcat 9.x
+## 🚀 How to Run
 
-IntelliJ IDEA (recommended)
+### 1️⃣ Clone the repository
 
-## How to Run
+Clone this repository to your local machine:
+```bash
+git clone https://github.com/<your-username>/spring-mvc-hibernate-aop-crud.git
+```
+Or download it as a ZIP archive and extract it.
 
-1️⃣ Install MySQL
+### 2️⃣ Open the project in IntelliJ IDEA
 
-Make sure MySQL is installed and running on your computer.
+Open IntelliJ IDEA
 
-MySQL version: 8.x
+Select File → Open
 
-Default port: 3306
+Choose the project folder
+
+IntelliJ will automatically detect the Maven project (pom.xml)
+
+Make sure Maven dependencies are downloaded successfully.
+
+### 3️⃣ Install MySQL
+
+Make sure **MySQL is installed and running** on your computer.
+
+- MySQL version: **8.x**
+- Default port: **3306**
 
 You can check MySQL installation by running:
 
+```bash
 mysql --version
+```
 
 Or by opening MySQL Workbench.
 
+### 4️⃣ Create a local database
 
-2️⃣ Create a local database
+Open MySQL Workbench (or terminal) and run:
 
-Open MySQL Workbench (or terminal) and execute the following SQL commands:
-
+```sql
 CREATE DATABASE my_db;
 USE my_db;
-
+```
+```sql
 Create table
 CREATE TABLE employees (
   id INT NOT NULL AUTO_INCREMENT,
@@ -53,26 +90,27 @@ CREATE TABLE employees (
   salary INT,
   PRIMARY KEY (id)
 );
-
+```
+```sql
 (Optional) Add test data
 INSERT INTO employees (name, surname, department, salary) VALUES
 ('Lucas', 'Neumann', 'IT', 1200),
 ('Sophie', 'Keller', 'HR', 900),
 ('Maria', 'Klein', 'Sales', 950);
+```
 
 
 ✅ Database is ready.
 
+### 5️⃣ Configure database credentials
 
-3️⃣ Configure database credentials
-
-Open the file:
+Open file:
 
 src/main/resources/applicationContext.xml
 
-
 Find this section:
 
+```bash
 <bean id="dataSource"
       class="com.mchange.v2.c3p0.ComboPooledDataSource"
       destroy-method="close">
@@ -84,83 +122,61 @@ Find this section:
     <property name="password" value="root"/>
 
 </bean>
+```
 
-What you can change if needed
+You can change if needed:
 
-jdbcUrl → database name (my_db)
+jdbcUrl → database name
 
 user → MySQL username
 
 password → MySQL password
 
-Example (default setup):
+### 6️⃣ Run the application
 
-<property name="user" value="root"/>
-<property name="password" value="root"/>
+This is a **classic Spring MVC application**, so it must be deployed to **Apache Tomcat**.
 
+### 🚀 Steps
 
-If your credentials are different, simply update these values.
+- 🐱 **Download Apache Tomcat 9.x**  
+  Example: `apache-tomcat-9.0.113`
 
+- 💡 **Open the project in IntelliJ IDEA**
 
-4️⃣ Run the application
-
-This project is a classic Spring MVC application, so it must be deployed to Apache Tomcat.
-
-Steps
-
-Download Apache Tomcat 9.x
-Example: apache-tomcat-9.0.113
-
-Open the project in IntelliJ IDEA
-
-Go to:
-
+- ⚙️ **Open Run Configurations**  
 Run → Edit Configurations
 
 
-Click +
+- ➕ **Add a new configuration**
 
-Select:
-
+- 🧩 **Select Tomcat Server**  
 Application Server → Tomcat Server → Local
 
 
-Configure Tomcat:
+- 🔧 **Configure Tomcat**
+- Click **Application Server → Configure**
+- Choose the Tomcat installation folder
 
-Click Application Server → Configure
+- 📦 **Deploy the application**
+- Click **Fix** → *Select artifact to deploy*
+- Choose: `spring_course_mvc:war exploded`
 
-Choose the folder where Apache Tomcat is installed
+- ▶️ **Start the server** (Run)
 
-Click Fix → Select artifact to deploy
-
-Choose: spring_course_mvc:war exploded
-
-Start the server (Run)
-
-Open browser:
-
+- 🌍 **Open browser**
 http://localhost:8080/
 
 
-🎉 You should see the employee table in the browser.
+🎉 **You should see the employee table in the browser.**
 
+---
 
-ℹ️ Important notes
+## ℹ️ Important Notes
 
-The database is not included in the repository (this is normal)
+- The database is **not included** in the repository
+- Each developer creates the database locally
+- All UI changes are persisted in MySQL
+- No additional MySQL users or connections are required
 
-Each developer creates the database locally
-
-All changes in the UI are persisted in MySQL
-
-No additional MySQL users or connections are required
-
-🧰 Technologies used
-
-- Java
-- Spring MVC
-- Hibernate
-- Spring AOP
-- MySQL
-- JSP
-- Maven
+---
+This project was built as a learning and portfolio project to demonstrate classic Spring MVC architecture.
