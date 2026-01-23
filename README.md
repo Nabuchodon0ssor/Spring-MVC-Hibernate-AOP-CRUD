@@ -80,8 +80,8 @@ Open MySQL Workbench (or terminal) and run:
 CREATE DATABASE my_db;
 USE my_db;
 ```
-```sql
 Create table
+```sql
 CREATE TABLE employees (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(15),
@@ -91,8 +91,8 @@ CREATE TABLE employees (
   PRIMARY KEY (id)
 );
 ```
-```sql
 (Optional) Add test data
+```sql
 INSERT INTO employees (name, surname, department, salary) VALUES
 ('Lucas', 'Neumann', 'IT', 1200),
 ('Sophie', 'Keller', 'HR', 900),
