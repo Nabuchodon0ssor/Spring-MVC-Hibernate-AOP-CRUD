@@ -110,7 +110,7 @@ src/main/resources/applicationContext.xml
 
 Find this section:
 
-```bash
+```xml
 <bean id="dataSource"
       class="com.mchange.v2.c3p0.ComboPooledDataSource"
       destroy-method="close">
@@ -179,4 +179,4 @@ http://localhost:8080/
 - No additional MySQL users or connections are required
 
 ---
-This project was built as a learning and portfolio project to demonstrate classic Spring MVC architecture.
+This project was built as a learning and portfolio project to demonstrate classic Spring MVC architecture and core enterprise patterns.
