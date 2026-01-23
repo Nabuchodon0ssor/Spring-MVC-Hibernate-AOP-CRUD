@@ -41,7 +41,7 @@ The project also demonstrates:
 
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/<your-username>/spring-mvc-hibernate-aop-crud.git
+git clone https://github.com/Nabuchodon0ssor/Spring-MVC-Hibernate-AOP-CRUD.git
 ```
 Or download it as a ZIP archive and extract it.
 
