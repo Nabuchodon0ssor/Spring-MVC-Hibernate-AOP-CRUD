@@ -154,12 +154,12 @@ Application Server → Tomcat Server → Local
 
 
 - 🔧 **Configure Tomcat**
-- Click **Application Server → Configure**
-- Choose the Tomcat installation folder
+  - Click **Application Server → Configure**
+  - Choose the Tomcat installation folder
 
 - 📦 **Deploy the application**
-- Click **Fix** → *Select artifact to deploy*
-- Choose: `spring_course_mvc:war exploded`
+  - Click **Fix** → *Select artifact to deploy*
+  - Choose: `spring_course_mvc:war exploded`
 
 - ▶️ **Start the server** (Run)
 
