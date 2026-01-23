@@ -32,6 +32,7 @@ mysql --version
 
 Or by opening MySQL Workbench.
 
+
 2️⃣ Create a local database
 
 Open MySQL Workbench (or terminal) and execute the following SQL commands:
@@ -57,6 +58,7 @@ INSERT INTO employees (name, surname, department, salary) VALUES
 
 
 ✅ Database is ready.
+
 
 3️⃣ Configure database credentials
 
@@ -94,6 +96,7 @@ Example (default setup):
 
 
 If your credentials are different, simply update these values.
+
 
 4️⃣ Run the application
 
@@ -136,6 +139,7 @@ http://localhost:8080/
 
 
 🎉 You should see the employee table in the browser.
+
 
 ℹ️ Important notes
 
