@@ -1,0 +1,29 @@
+### Maven ###
+target/
+*.war
+*.jar
+*.class
+
+### Logs ###
+*.log
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+### Eclipse / STS ###
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### VS Code ###
+.vscode/
+
+### OS ###
+.DS_Store
+Thumbs.db
