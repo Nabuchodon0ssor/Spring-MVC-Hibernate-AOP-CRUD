@@ -106,7 +106,7 @@ INSERT INTO employees (name, surname, department, salary) VALUES
 
 Open file:
 
-src/main/resources/applicationContext.xml
+src/main/webapp/WEB-INF/applicationContext.xml
 
 Find this section:
 
