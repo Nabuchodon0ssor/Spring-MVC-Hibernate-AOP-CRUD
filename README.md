@@ -47,15 +47,11 @@ Or download it as a ZIP archive and extract it.
 
 ### 2️⃣ Open the project in IntelliJ IDEA
 
-Open IntelliJ IDEA
-
-Select File → Open
-
-Choose the project folder
-
-IntelliJ will automatically detect the Maven project (pom.xml)
-
-Make sure Maven dependencies are downloaded successfully.
+- Open IntelliJ IDEA
+- Select File → Open
+- Choose the project folder
+- IntelliJ will automatically detect the Maven project (pom.xml)
+- Make sure Maven dependencies are downloaded successfully.
 
 ### 3️⃣ Install MySQL
 
